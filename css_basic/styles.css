@@ -1,4 +1,4 @@
-/* Apply Flexbox to body */
+/* Apply Flexbox to body */ 
 body {
     display: flex;
     flex-direction: column;
@@ -41,4 +41,21 @@ aside {
 footer {
     background-color: #f0f0f0;
     padding: 10px;
+}
+
+/* Media query for small screens (mobile) */
+@media (max-width: 768px) {
+    body.works_on_smartphone main {
+        flex-direction: column; /* Stack the sections vertically */
+    }
+
+    article, aside {
+        flex: none; /* Allow sections to take full width */
+        width: 100%;
+        padding: 10px; /* Adjust padding for better mobile spacing */
+    }
+
+    header, footer {
+        padding: 8px; /* Adjust padding for mobile */
+    }
 }
