@@ -14,6 +14,14 @@ header, footer {
     text-align: center;
 }
 
+/* Style the logo */
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #333;
+}
+
 /* Apply Flexbox to main */
 main {
     display: flex;
@@ -27,7 +35,12 @@ article {
     flex: 2; /* Takes 2/3 of the width */
     padding: 15px;
     overflow-y: auto; /* Allows scrolling */
-    background-color: #ffffff;
+    background-color: #f9f9f9; /* Light background */
+    border: 1px solid #ddd; /* Add a border */
+    border-radius: 5px; /* Rounded corners */
+    font-family: Arial, sans-serif; /* Change font style */
+    line-height: 1.6; /* Increase readability */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
 }
 
 aside {
@@ -57,5 +70,10 @@ footer {
 
     header, footer {
         padding: 8px; /* Adjust padding for mobile */
+    }
+
+    header .logo {
+        font-size: 20px;
+        margin-bottom: 5px; /* Adjust spacing for smaller screens */
     }
 }
