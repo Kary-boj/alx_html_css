@@ -1,0 +1,455 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Shared Wrapper for Header and First Section */
+.header-section-wrapper {
+    background: url('../CSS Advanced/Object.png') no-repeat;
+    background-size: cover;
+    color: white;
+    height: 100vh;
+    margin-bottom: 0;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+}
+
+header img {
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 200px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding-left: 500px;
+    justify-content: flex-end;
+}
+
+header ul li {
+    margin: 0 14px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Banner Section Styles */
+section {
+    padding: 20px 100px;
+    color: white;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column; /* Stack h1, div (inline-texts), and button vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center the text */
+    gap: 10px; /* Add space between each section */
+    margin-top: 20px;
+}
+
+.text-container h1 {
+    font-size: 115px;
+    margin-bottom: 0;
+}
+
+.inline-texts {
+    display: flex; /* Arrange spans inline */
+    gap: 15px; /* Space between spans */
+}
+
+.inline-texts span {
+    font-size: 13px;
+    margin: 0 25px;
+}
+
+.text-container button {
+    padding: 15px 15px;
+    background-color: rgb(205, 113, 233);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-top: 30px;
+    font-weight: bold;
+    margin-bottom: 90px;
+}
+
+section:first-of-type h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 100px;
+    font-weight: normal;
+}
+
+.highlight {
+    color: rgb(205, 113, 233);
+}
+
+.award-container {
+    display: flex; /* Arrange child elements side by side */
+    justify-content: space-around; /* Add space between the cards */
+    align-items: flex-start; /* Align items at the top */
+    flex-wrap: wrap; /* Allow wrapping if there are too many items */
+    gap: 20px; /* Add spacing between cards */
+    padding: 40px; /* Optional: Add padding around the container */
+}
+
+.award-card {
+    text-align: center; /* Center the content within each card */
+    max-width: 150px; /* Limit the width of each card */
+    flex: 1; /* Allow cards to shrink and fit in the container */
+}
+
+.award-card img {
+    width: 150px; /* Set smaller image size */
+    height: 150px; /* Optional: Keep images square */
+    object-fit: cover; /* Ensure the image fits nicely */
+    border-radius: 50%; /* Optional: Make images circular */
+}
+
+.award-card h3 {
+    font-size: 15px; /* Adjust the font size for the name */
+    margin: 10px 0 5px 0; /* Add spacing around the title */
+}
+
+.award-card p {
+    font-size: 15px; /* Smaller font for additional information */
+    color: #efe9e9; /* Optional: Subtle color for the description */
+    margin: 0;
+    font-style: italic;
+}
+
+.testimonial {
+    display: flex; /* Arrange image and text side by side */
+    align-items: center; /* Vertically align content */
+    justify-content: center;
+    background-color: rgb(205, 113, 233); /* Set purple background */
+    color: white; /* Make text color white for contrast */
+    padding: 100px 60px; /* Add padding around the section */
+    gap: 20px; /* Add space between the image and text */
+    position: relative;
+    top: -30px;
+}
+
+.testimonial-image img {
+    width: 180px; /* Set image width */
+    height: 180px; /* Set image height */
+    object-fit: cover; /* Ensure the image fits nicely */
+    border-radius: 50%;
+    margin-right: 20px;
+    align-self: center;
+}
+
+.testimonial-text {
+    max-width: 600px; /* Limit the width of the text block */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.testimonial-text blockquote {
+    font-size: 16px;
+    margin-bottom: 10px; /* Add spacing below the blockquote */
+    line-height: 1.5; /* Improve readability */
+    text-align: left;
+}
+
+.testimonial-text h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.testimonial-text p {
+    font-size: 14px;
+    color: #ddd; /* Lighter shade for the role */
+    margin: 0;
+    padding: 5px 0;
+}
+
+/* General Section Styling */
+.tutorial-section {
+    background-color: white; /* White background */
+    padding: 80px 100px; /* Add some padding */
+    text-align: center;
+}
+
+/* Title Styling */
+.tutorial-section h2 {
+    font-size: 32px; /* Normal font size */
+    font-weight: normal; /* Remove bold style */
+    color: black; /* Default color */
+    margin-bottom: 90px;
+    margin-top: 10px;
+}
+
+.tutorial-section h2 .purple {
+    color: rgb(205, 113, 233); /* Highlight "popular" in purple */
+}
+
+/* Tutorials Layout */
+.tutorials-container {
+    display: flex; /* Arrange tutorials in a row */
+    justify-content: space-between; /* Space them evenly */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    gap: 20px; /* Add spacing between items */
+}
+
+/* Tutorial Item Styling */
+.tutorial-item {
+    width: 250px; /* Make each item smaller */
+    text-align: center; /* Center-align text */
+    position: relative;
+}
+
+.image-container .foreground {
+    width: 25%;
+    height: auto;
+    justify-content: center;
+}
+
+.background {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.foreground {
+    width: 25%;
+    height: 25%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tutorial-item img .background {
+    width: 100%; /* Make images fit the container */
+    height: auto;
+}
+
+.tutorial-item h3 {
+    font-size: 18px; /* Smaller title size */
+    margin: 5px 0;
+    color: #110e2e;
+    font-weight: bold;
+    text-align: left;
+}
+
+.tutorial-item p {
+    font-size: 14px; /* Smaller text */
+    margin: 5px 0;
+    color: #666;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+/* Comment Section Styling */
+.comment-container {
+    display: flex; /* Align comment image and rating horizontally */
+    justify-content: space-between; /* Text on left, rating on right */
+    align-items: center;
+    margin-top: 5px; /* Space above the comment section */
+    color: #110e2e;
+}
+
+.comment-container img {
+    position: absolute;
+    width: 30px; /* Smaller image size */
+    height: 30px;
+    border-radius: 50%; /* Optional: Make it circular */
+}
+
+.comment-container h4 {
+    font-size: 12px; /* Smaller text */
+    margin: 0 40px; /* Space around text */
+    color: rgb(205, 113, 233);
+}
+
+.rating img {
+    width: 90px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+}
+/* Time (8 min) Styling */
+.time {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 10px; /* Smaller font size */
+    color: rgb(205, 113, 233);
+}
+
+/* Time Text Styling */
+.time p {
+    margin-left: 10px; /* Space between rating and time */
+}
+
+/* Membership Section */
+section:nth-of-type(4) h2 {
+    text-align: center; /* Center the text */
+    font-size: 40px;
+    color: white;
+    padding: 10px 390px;
+    margin-bottom: 30px; /* Optional spacing from the content below */
+}
+
+.Free {
+    color:rgb(205, 113, 233);
+}
+
+section:nth-of-type(4) {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: #110e2e;
+}
+
+section:nth-of-type(4) div {
+    width: 200px;
+    margin: 10px;
+}
+
+section:nth-of-type(4) img {
+    width: 40px;
+    height: 50px;
+}
+
+section:nth-of-type(4) h3 {
+    font-size: 18px;
+    margin: 10px 20px;
+}
+
+section:nth-of-type(4) p {
+    font-size: 14px;
+    color: rgb(239, 239, 239);
+    font-size: 12px;
+    margin-bottom: 10px;
+    line-height: 2;
+}
+
+section:nth-of-type(4) button {
+    margin: 100px;
+    padding: 10px 50px;
+    background-color: rgb(205, 113, 233);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    height: 40px;
+    font-weight: bold;
+}
+
+/* FAQ Section */
+/* General Section Styling */
+.section {
+    text-align: center;
+    margin: 50px auto;
+    background-color: white;
+    color: #110e2e;
+    margin-left: 180px;
+    margin-right: 180px;
+}
+
+.feedback {
+    font-size: 55px; /* Make the title prominent */
+    font-weight: normal;
+    margin-bottom: 70px;
+    color: #110e2e;
+    letter-spacing: 2px;
+}
+
+/* FAQ Container Styling */
+.faq-container {
+    display: flex;
+    flex-direction: column; /* Stack rows vertically */
+    gap: 30px; /* Space between rows */
+}
+
+/* FAQ Row Styling */
+.faq-row {
+    display: flex; /* Display items side-by-side in rows */
+    justify-content: space-between; /* Spread items evenly */
+    gap: 250px; /* Add spacing between items */
+}
+
+/* Individual FAQ Item Styling */
+.faq-item {
+    flex: 1; /* Make items take equal width */
+    text-align: left; /* Align text to the left */
+    background-color: white; /* Light background for contrast */
+    padding: 15px;
+}
+
+.faq-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.faq-item p {
+    font-size: 12px;
+    color: #666; /* Slightly darker color for the text */
+    line-height: 2;
+}
+
+/* Footer Styles */
+footer {
+    padding: 20px;
+    background-color: #111334; /* Black background for footer */
+    color: white;
+    text-align: center;
+}
+
+footer div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer img {
+    margin-top: 50px;
+    height: 30px;
+}
+
+footer p {
+    margin-top: 50px;
+    font-size: 10px;
+    color: #666;
+}
+
+footer i {
+    margin: 0 10px;
+    color: white;
+    cursor: pointer;
+}
