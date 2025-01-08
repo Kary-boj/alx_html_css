@@ -1,0 +1,479 @@
+* {
+    box-sizing: border-box; /* Includes padding and border in width/height calculations */
+    margin: 0;
+    padding: 0;
+}
+
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+/* shared image for header and first section */
+.header-section-image {
+    background: url('../images/headphones_hero_1.jpg') no-repeat;
+    background-size: cover;
+    color: #333333;
+    height: 100vh;
+    margin-bottom: 0;
+}
+
+/*header styles */
+header {
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+}
+
+/* Hamburger menu for mobile */
+.hamburger-menu {
+    display: none; /* Default hidden */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+/* Center the logo */
+.logo {
+    height: 38px;
+    padding-left: 0;
+    padding-top: 5px;
+    margin-left: 220px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nav-menu {
+    margin-left: 500px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 55px;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end; /* Align the list items to the right */
+}
+
+header ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fd6767fc;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    header {
+        justify-content: center; /* Center elements for mobile */
+    }
+
+    .hamburger-menu {
+        display: flex; /* Show hamburger menu on mobile */
+        position: absolute;
+        left: 20px;
+    }
+
+    header img {
+        position: static; /* Center logo on mobile */
+        transform: translateX(0);
+        margin: 0 auto;
+    }
+
+    nav ul {
+        display: none; /* Hide navigation by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Adjust based on the logo size */
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    nav ul.show {
+        display: flex; /* Show navigation when toggled */
+    }
+}
+
+/* Banner section styles */
+.text-section {
+    padding: 80px 0;
+    color: white;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-top: 250px;
+}
+
+.text-container h1 {
+    display: flex;
+    gap: 15px;
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+
+.inline-text {
+    display: flex;
+    gap: 15px;
+}
+
+.inline-text p {
+    color: white;
+    margin-top: 0px;
+}
+
+.text-container button{
+    padding: 15px 28px;
+    background-color: #fd6767fc;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-top: 25px;
+    font-weight: bold;
+    margin-bottom: 68px;
+}
+
+.line-text {
+    display: flex;
+    flex-wrap: wrap; /* Ensures the content wraps if it overflows */
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px; /* Adds consistent inner spacing from the sides */
+    margin: 0 auto 60px; /* Centers the container horizontally and keeps the bottom margin */
+    max-width: 670px;
+}
+.line-text p {
+    color: white;
+    font-family: 'Source Sans Pro';
+    src: url('../PNG/SourceSansPro-Light.otf') format('truetype');
+    font-weight: 300; /* Light weight */
+    font-style: normal;
+    line-height: 2;
+}
+
+.header-image {
+    text-align: center;
+    align-items: center;
+    padding: 100px;
+}
+
+.header-section {
+    font-size: 20px;
+    text-align: center;
+    color: black;
+}
+
+.text-styling {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    gap: 20px;
+    padding: 0 20px;
+    color: black;
+    font-family: 'Source Sans Pro';
+    src: url('../PNG/SourceSansPro-Regular.otf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 40px auto; /* Centers the container horizontally */
+    max-width: 690px; /* Setx the maximum width of the paragraph */
+}
+
+.what-wedo {
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    color: black;
+    position: relative;
+}
+
+.image-container {
+    text-align: center;
+    max-width: 180px;
+    flex: 1;
+}
+
+.image-container img{
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    color: #fd6767fc;
+    filter: invert(43%) sepia(86%) saturate(1864%) hue-rotate(334deg) brightness(98%) contrast(101%);
+    object-fit: contain;
+}
+
+.image-container h3 {
+    font-size: 15px;
+    margin: 10px 0 5px 5px;
+    color: #111111;
+}
+
+.image-container p {
+    font-size: 12px;
+    color: #555555;
+    margin: 0;
+    line-height: 1.8;
+}
+
+.percentage-new {
+    text-align: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.section-back {
+    background: url(../images/headphones_hero_2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: white;
+    color: white;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    padding-top: 150px;
+}
+
+.section-back h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+    justify-items: center;
+}
+
+.section-back p {
+    font-size: 15px;
+    color: white;
+    margin: 0 auto; /* Centers the paragraph container horizontally */
+    text-align: center; /* Aligns the text to the center */
+    padding: 0 20px; /* Adds some inner spacing from the sides */ 
+    padding-bottom: 100px;
+    line-height: 2;
+    font-weight: normal;
+    max-width: 690px; /* Sets the maximum width of the paragraph */
+}
+
+.section-percentage {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.new-percentage {
+    text-align: center;
+    width: 250px;
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new-percentage img {
+    width: 200px;
+    height: 200px;
+}
+
+.new-percentage span {
+    font-size: 45px;
+    color: white;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+
+.new-percentage p {
+    font-size: 14px;
+    color: white;
+    margin-top: 10px;
+    position: absolute;
+    top: 90%;
+    left: 48%;
+    transform: translate(-40%, -40%);
+}
+
+/* Center everything in the contact section */
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Ensure the section starts at the top */
+    height: 100vh;
+    text-align: center;
+    padding-top: 180px;
+}
+
+/* Title styling */
+.contact-title {
+    font-size: 24px;
+    margin-bottom: 50px;
+    color: #333;
+    text-align: center; /* Center the title */
+    width: 100%; /* Ensure the title spans full width */
+}
+
+/* Contact section styles */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align the labels to the right */
+    justify-content: center;
+    width: 100%;
+    max-width: 500px; /* Optional: To limit the form width */
+    font-weight: bold;
+}
+
+/* Label styling */
+label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    text-align: right; /* Align label text to the right */
+}
+
+/* Input field and textarea styling */
+.contact-input, .contact-textarea {
+    border: none;
+    border-bottom: 2px solid black;  /* Black line beneath the input */
+    outline: none;
+    font-size: 16px;
+    padding: 8px 0;
+    width: 100%;  /* Makes the input take full width */
+    margin-bottom: 20px;
+    text-align: left;  /* Left aligns the text inside the input fields */
+}
+
+.contact-input:focus, .contact-textarea:focus {
+    border-bottom: 2px solid black;  /* Line color when focused */
+}
+
+.contact-textarea {
+    resize: none;  /* Prevent resizing of textarea */
+    height: 40px; /* Set a fixed height for the textarea */
+}
+
+/* Button styling */
+.button {
+    padding: 15px 30px;
+    background-color: #fd6767fc;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px; /* Space above the button */
+}
+
+/* Footer Section */
+footer {
+    background-color: rgb(14, 14, 30); /* Navy blue background */
+    color: white;
+    padding: 100px 0; /* Increased padding */
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+/* Footer Content Layout */
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Top Row: Logo and Social Media */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px; /* Optional: to limit max width of the content */
+}
+
+/* Logo on the Left */
+.footer-logo {
+    height: 40px; /* Smaller logo size */
+    object-fit: contain;
+}
+
+/* Social Media Icons on the Right */
+.social-media {
+    display: flex;
+    gap: 15px; /* Space between icons */
+}
+
+.social-media img {
+    height: 25px; /* Adjust icon size */
+    filter: brightness(0) invert(1); /* Makes icons white */
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
+}
+
+/* Bottom Centered Text */
+.footer-text {
+    font-size: 12px;
+    color: #666;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
